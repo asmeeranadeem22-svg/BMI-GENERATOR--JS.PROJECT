@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bmi.js"></script>
+    <title>BMI Generator</title>
+</head>
+<style >
+    body{
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #8ab8df;
+  
+    }
+    h1{
+        text-align:center;
+        margin-top:50px;
+        margin-bottom: 100px;
+    }
+   
+    weight-label{
+    
+        font-weight: bold;
+        display:flex;
+        gap: 10px;
+        font-size: large;
+        
+        
+    }
+    height-label{
+        font-weight: bold;
+        display:flex;
+        gap: 10px;
+        font-size: large;
+       
+    }
+    input[type=number]{
+        width: 300px;
+        height: 30px;
+        font-size: large;
+        display:inline-block
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #bmi-details{
+        display:inline-block;
+        border: 2px solid black;
+        padding: 20px;
+        text-align: left;
+        text-shadow: 1px 1px 2px #000000;
+
+    }
+   
+</style>
+<body>
+    <div class = "container">
+    <h1>Body Mass Index Generator</h1>
+    <form>
+        
+    
+    <p id="weight-label" , min ="0.1">
+        <h3><label for="weight">Weight (kg):</label> </h3>
+    </p>
+    <input type="number" id="weight" placeholder="Enter your weight in kg" min="0">
+    <p id="height-label">
+        <h3><label for = "height" > Height (m):</label></h3>
+    </p>
+    <input type="number" id="height" placeholder="Enter your height in meters" min ="0">
+    <br><br><br>
+    <button type ="button" onclick="calculateBMI()">Calculate BMI</button>
+    <div id="result">
+        <h3>Your BMI Result: <span id="bmi-value"></span></h3>
+    </div>  
+    
+    <div id="bmi-details">
+        <h3 >BMI weight Details:</h3>
+        <p>Normal weight: BMI between 18.5 and 24.9</p>
+        <p>Underweight: BMI less than 18.5</p>
+        <p>Overweight: BMI between 25 and 29.9</p>
+        <p>Obesity: BMI of 30 or greater</p>
+     </div>
+
+    
+    </form> 
+    </div>  
+</body>
+</html>
